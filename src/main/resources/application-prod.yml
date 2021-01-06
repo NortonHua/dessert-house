@@ -1,0 +1,37 @@
+#生产环境配置
+
+server:
+  # 服务端口
+  port: 443
+  ssl:
+    key-store: classpath:onesweetoneday.com.jks
+    key-store-type: JKS
+    key-store-password: 58pr880zq26b5uf
+    enabled: true
+
+spring:
+  # 数据源配置，请修改为你项目的实际配置
+  datasource:
+    username: "root"
+    password: "woshishui@qq.com"
+
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.33.125.160:3306/dessert-house?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF8
+
+
+# 开启权限拦截
+auth:
+  enabled: true
+
+
+# 开启http请求日志记录
+request-log:
+  enabled: true
+
+
+
+
+
+
+

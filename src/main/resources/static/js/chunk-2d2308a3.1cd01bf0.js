@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2308a3"],{ed5c:function(e){e.exports={name:"lc-plugin-custom",title:"图像上传组件示例",version:"1.0.0",_linVersion:"0.0.1-alpha.3",description:"展示图像上传组件能力",author:"",dependencies:{},devDependencies:{}}}}]);

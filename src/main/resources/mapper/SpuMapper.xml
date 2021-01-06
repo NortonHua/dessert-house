@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.gench.mapper.SpuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.edu.gench.model.SpuDO">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="delete_time" property="deleteTime" />
+        <result column="title" property="title" />
+        <result column="subtitle" property="subtitle" />
+        <result column="category_id" property="categoryId" />
+        <result column="online" property="online" />
+        <result column="price" property="price" />
+        <result column="img" property="img" />
+        <result column="discount_price" property="discountPrice" />
+        <result column="description" property="description" />
+        <result column="property" property="property" />
+    </resultMap>
+
+    <resultMap id="SpuDetailMap" type="cn.edu.gench.dto.SpuDetailInfo">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="subtitle" property="subtitle"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="online" property="online"/>
+        <result column="price" property="price"/>
+        <result column="img" property="img"/>
+        <result column="discount_price" property="discountPrice"/>
+        <result column="description" property="description"/>
+        <result column="property" property="property"/>
+        <collection property="properties" ofType="cn.edu.gench.dto.SpecKeyInfo">
+            <id column="kid" property="id"/>
+            <result column="name" property="name"/>
+            <result column="unit" property="unit"/>
+            <collection property="childsCurGoods" ofType="cn.edu.gench.dto.SpecValueInfo">
+                <id column="vid" property="id"/>
+                <result column="value" property="value"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="getDetailById" resultMap="SpuDetailMap">
+        SELECT p.*,k.id kid,k.`name`,k.unit,v.id vid,v.`value`
+        FROM spu p
+        LEFT JOIN spu_key sk ON p.id=sk.spu_id
+        LEFT JOIN spec_key k ON k.id=sk.spec_key_id
+        LEFT JOIN spec_value v ON v.spec_id=k.id
+        WHERE p.id=#{id}
+    </select>
+
+</mapper>

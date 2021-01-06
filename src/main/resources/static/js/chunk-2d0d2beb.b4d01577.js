@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d2beb"],{"5a8a":function(e){e.exports={name:"lc-plugin-lin-cms-ui",title:"UI",version:"1.0.0",_linVersion:"0.0.1-alpha.3",description:"",author:"",dependencies:{},devDependencies:{}}}}]);

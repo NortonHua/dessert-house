@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e5b04"],{"960a":function(e){e.exports={name:"lc-plugin-charts",title:"数据分析",version:"0.0.1",_linVersion:"0.0.1-alpha.3",description:"图表数据分析",author:"Jokky",dependencies:{"@antv/g2plot":"^0.11.35"},devDependencies:{}}}}]);
