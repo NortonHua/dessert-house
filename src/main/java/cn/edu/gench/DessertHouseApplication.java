@@ -33,7 +33,7 @@ public class DessertHouseApplication {
         return modelAndView;
     }
 
-    //@Bean
+//    @Bean
     public ServletWebServerFactory servletContainer() {
 
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {

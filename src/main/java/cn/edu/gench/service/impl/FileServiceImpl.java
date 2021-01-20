@@ -1,12 +1,12 @@
 package cn.edu.gench.service.impl;
 
+import cn.edu.gench.bo.FileBO;
+import cn.edu.gench.mapper.FileMapper;
+import cn.edu.gench.model.FileDO;
 import cn.edu.gench.module.file.FileConstant;
 import cn.edu.gench.module.file.Uploader;
 import cn.edu.gench.service.FileService;
 import cn.hutool.core.bean.BeanUtil;
-import cn.edu.gench.bo.FileBO;
-import cn.edu.gench.mapper.FileMapper;
-import cn.edu.gench.model.FileDO;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

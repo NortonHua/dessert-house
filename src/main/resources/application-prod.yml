@@ -14,8 +14,6 @@ spring:
   datasource:
     username: "root"
     password: "woshishui@qq.com"
-
-
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://101.33.125.160:3306/dessert-house?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF8
 

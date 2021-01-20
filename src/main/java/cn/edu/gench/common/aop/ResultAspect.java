@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component;
 public class ResultAspect {
 
 
-    @Pointcut("execution(public * io.github.talelin.latticy.controller..*.*(..))")
+    @Pointcut("execution(public * cn.edu.gench.controller..*.*(..))")
     public void handlePlaceholder() {
     }
 
