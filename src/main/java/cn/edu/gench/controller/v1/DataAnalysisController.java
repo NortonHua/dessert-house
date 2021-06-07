@@ -37,7 +37,7 @@ public class DataAnalysisController {
     //public SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @GetMapping("/sales-comparision")
-    @ApiOperation("各商品每月销售额对比")
+    @ApiOperation("各商品每月销售额对比asfaf")
     public List<SalesInfo> getLastThreeMonthSales() {
         return wxOrderService.getSalesInfo();
     }
@@ -59,7 +59,6 @@ public class DataAnalysisController {
     public MonthCountInfo getLastMonthOrderCount() {
         return wxOrderService.getLastMonthOrderCount();
     }
-
 
 
     @GetMapping("/category-orders")
