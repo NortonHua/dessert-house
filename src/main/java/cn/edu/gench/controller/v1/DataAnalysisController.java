@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/v1/analysis")
-@Api(value = "/analysis", tags = {"数据分析相关API垃圾大家时间"})
+@Api(value = "/analysis", tags = {"数据分析相关API大妙啊"})
 public class DataAnalysisController {
 
     @Autowired
@@ -39,12 +39,14 @@ public class DataAnalysisController {
     @GetMapping("/sales-comparision")
     @ApiOperation("各商品每月销售额对比asfaf")
     public List<SalesInfo> getLastThreeMonthSales() {
+        System.out.println("nihaoa");
         return wxOrderService.getSalesInfo();
     }
 
     @GetMapping("/count-comparision")
     @ApiOperation("各商品每月销售量对比顶顶顶")
     public List<SaleCountInfo> getLastThreeMonthCount() {
+        
         return wxOrderService.getSaleCountByMonth();
     }
 
